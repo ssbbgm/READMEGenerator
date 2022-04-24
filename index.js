@@ -4,13 +4,13 @@ inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'What is the name of your project?',
+      name: 'projectTitle',
     },
     {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
+      type: 'input',
+      message: 'Please provide a description for your project: ',
+      name: 'projectDescription',
     },
     {
       type: 'password',
