@@ -13,10 +13,15 @@ inquirer
       name: 'projectDescription',
     },
     {
-      type: 'password',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
+      type: 'input',
+      message: 'Describe the installation instructions of your project (if any): ',
+      name: 'projectInstallation',
     },
+    {
+        type: 'input',
+        message: 'What is the usage of your project?',
+        name: 'projectUsage',
+      }
   ])
   .then((response) =>
     response.confirm === response.password
