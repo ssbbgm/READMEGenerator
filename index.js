@@ -4,27 +4,27 @@ inquirer
   .prompt([
     {
         type: 'input',
-        message: 'What is the name of your project?',
+        message: 'What is the name of this project?',
         name: 'projectTitle',
     },
     {
         type: 'input',
-        message: 'Please provide a description for your project: ',
+        message: 'Please provide a description for this project: ',
         name: 'projectDescription',
     },
     {
         type: 'input',
-        message: 'Describe the installation instructions of your project (if any): ',
+        message: 'Describe the installation instructions of this project (if any): ',
         name: 'projectInstallation',
     },
     {
         type: 'input',
-        message: 'What is the usage of your project?',
+        message: 'What is the usage of this project?',
         name: 'projectUsage',
     },
     {
         type: 'list',
-        message: 'Which license does your project fall under?',
+        message: 'Which license does this project fall under?',
         choices: [
             'Apache',
             'Academic',
@@ -38,7 +38,12 @@ inquirer
             'Eclipse'
         ],
         name: 'projectLicense',
-    }
+    },
+    {
+        type: 'input',
+        message: 'Who contributed to this project?',
+        name: 'projectContributors',
+    },
   ])
   .then((response) =>
     response.confirm === response.password
