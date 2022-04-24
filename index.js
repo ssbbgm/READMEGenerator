@@ -44,6 +44,31 @@ inquirer
         message: 'Who contributed to this project?',
         name: 'projectContributors',
     },
+    {
+        type: 'input',
+        message: 'Are there tests this project?',
+        name: 'projectTests',
+    },
+    {
+        type: 'input',
+        message: 'Who contributed to this project?',
+        name: 'projectContributors',
+    },
+    {
+        type: 'input',
+        message: 'Who should be contacted if there are questions about the project?',
+        name: 'projectQuestions',
+    },
+    {
+        type: 'input',
+        message: 'Please provide the GitHub username: ',
+        name: 'projectGitHub',
+    },
+    {
+        type: 'input',
+        message: 'Please provide the main POCs email address: ',
+        name: 'projectEmail',
+    },
   ])
   .then((response) =>
     response.confirm === response.password
