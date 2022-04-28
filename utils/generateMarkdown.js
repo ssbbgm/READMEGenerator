@@ -43,7 +43,11 @@ function generateMarkdown(data) {
 
   ##Contact
 
-  If you have any questions about this project please contact: 
+  If you have any questions about this project please contact: ${data.contact}
+
+  Github: ${data.github}
+
+  Email: ${data.email}
 
 
 `;
