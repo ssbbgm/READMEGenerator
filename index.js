@@ -3,17 +3,30 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
+
 inquirer
   .prompt([
     {
         type: 'input',
         message: 'What is the name of this project?',
         name: 'title',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("A valid name for the project is required.");
+            }
+            return true;
+        }
     },
     {
         type: 'input',
         message: 'Please provide a description for this project: ',
         name: 'description',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("A valid description for the project is required.");
+            }
+            return true;
+        }
     },
     {
         type: 'input',
@@ -24,6 +37,12 @@ inquirer
         type: 'input',
         message: 'What is the usage of this project?',
         name: 'usage',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("A valid usage for the project is required.");
+            }
+            return true;
+        }
     },
     {
         type: 'list',
@@ -51,21 +70,45 @@ inquirer
         type: 'input',
         message: 'Who contributed to this project?',
         name: 'contributors',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("Please add contributor(s).");
+            }
+            return true;
+        }
     },
     {
         type: 'input',
         message: 'Who should be contacted if there are questions about the project?',
         name: 'contact',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("Please add content.");
+            }
+            return true;
+        }
     },
     {
         type: 'input',
         message: 'Please provide the GitHub username (without the @): ',
         name: 'github',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("Please add your Github information.");
+            }
+            return true;
+        }
     },
     {
         type: 'input',
         message: 'Please provide the main POCs email address: ',
         name: 'email',
+        validate: function (data) {
+            if (data.length < 1) {
+                return console.log("Please add an email address.");
+            }
+            return true;
+        }
     }
   ])
   .then((data) => {
