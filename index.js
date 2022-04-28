@@ -1,26 +1,28 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 inquirer
   .prompt([
     {
         type: 'input',
         message: 'What is the name of this project?',
-        name: 'projectTitle',
+        name: 'title',
     },
     {
         type: 'input',
         message: 'Please provide a description for this project: ',
-        name: 'projectDescription',
+        name: 'description',
     },
     {
         type: 'input',
         message: 'Describe the installation instructions of this project (if any): ',
-        name: 'projectInstallation',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'What is the usage of this project?',
-        name: 'projectUsage',
+        name: 'usage',
     },
     {
         type: 'list',
@@ -37,17 +39,12 @@ inquirer
             'Common Development and Distribution',
             'Eclipse'
         ],
-        name: 'projectLicense',
-    },
-    {
-        type: 'input',
-        message: 'Who contributed to this project?',
-        name: 'projectContributors',
+        name: 'license',
     },
     {
         type: 'input',
         message: 'Are there tests this project?',
-        name: 'projectTests',
+        name: 'tests',
     },
     {
         type: 'input',
@@ -57,21 +54,18 @@ inquirer
     {
         type: 'input',
         message: 'Who should be contacted if there are questions about the project?',
-        name: 'projectQuestions',
+        name: 'contact',
     },
     {
         type: 'input',
         message: 'Please provide the GitHub username: ',
-        name: 'projectGitHub',
+        name: 'github',
     },
     {
         type: 'input',
         message: 'Please provide the main POCs email address: ',
-        name: 'projectEmail',
+        name: 'email',
     },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  );
+
+generateMarkdown();
