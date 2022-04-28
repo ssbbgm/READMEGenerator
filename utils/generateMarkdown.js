@@ -9,28 +9,28 @@ function renderLicenseBadge(data) {
       licenseBadge += `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
       break;
       case 'BSD-3 Clause':
-      licenseBadge += `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`;
       break;
       case 'BSD-2 Clause':
-      licenseBadge += `![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]`;
       break;
       case 'GNU General Public License (GPL)':
-      licenseBadge += `![License](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;
       break;   
       case 'GNU Library or "Lesser" General Public License (LGPL)':
-      licenseBadge += `![License](https://img.shields.io/badge/License-LGPL_v3-blue.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-LGPL_v3-blue.svg)]`;
       break; 
       case 'MIT':
-      licenseBadge += `[![License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
       break; 
       case 'Mozilla Public License':
-      licenseBadge += `![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
+      licenseBadge += `[![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
       break; 
       case 'Common Development and Distribution':
-      licenseBadge += `![License](https://repology.org/badge/vertical-allrepos/cddl.svg)`;
+      licenseBadge += `[![License](https://repology.org/badge/vertical-allrepos/cddl.svg)]`;
       break; 
       case 'Eclipse':
-      licenseBadge += `![License](https://repology.org/badge/vertical-allrepos/cddl.svg)`;
+      licenseBadge += `[![License](https://repology.org/badge/vertical-allrepos/cddl.svg)]`;
       break; 
       default:
       licenseBadge;
