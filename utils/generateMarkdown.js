@@ -1,8 +1,5 @@
-// license links can be found here
-// https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 // [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string

@@ -4,7 +4,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 
 
-function getInfo(){
+
 inquirer
   .prompt([
     {
@@ -69,19 +69,21 @@ inquirer
         message: 'Please provide the main POCs email address: ',
         name: 'email',
     }
-  ]);
+  ])
+  .then((data) => {
+    fs.writeFileSync('${data.title}.md', generateMarkdown(data))
+    .then(() => console.log('Successfully wrote to README'))
+    .catch((err) => console.error(err))
+   });
 
+// const init = () => {
+//     getInfo()
+//       .then((data) => fs.writeFileSync('${data.title}.md', generateMarkdown(data))
+//       .then(() => console.log('Successfully wrote to README'))
+//       .catch((err) => console.error(err)))
+// };
 
-};
-
-const init = () => {
-    getInfo()
-      .then((data) => fs.writeFileSync('${data.title}.md', generateMarkdown(data))
-      .then(() => console.log('Successfully wrote to README'))
-      .catch((err) => console.error(err)))
-};
-
-init();
+// init();
   
   
   
