@@ -2,6 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+function getInfo(){
 inquirer
   .prompt([
     {
@@ -29,7 +30,6 @@ inquirer
         message: 'Which license does this project fall under?',
         choices: [
             'Apache',
-            'Academic',
             'BSD-3 Clause',
             'BSD-2 Clause',
             'GNU General Public License (GPL)',
@@ -37,13 +37,14 @@ inquirer
             'MIT',
             'Mozilla Public License',
             'Common Development and Distribution',
-            'Eclipse'
+            'Eclipse',
+            'None'
         ],
         name: 'license',
     },
     {
         type: 'input',
-        message: 'Are there tests this project?',
+        message: 'Are there tests for this project?',
         name: 'tests',
     },
     {
@@ -58,14 +59,14 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Please provide the GitHub username: ',
+        message: 'Please provide the GitHub username (without the @): ',
         name: 'github',
     },
     {
         type: 'input',
         message: 'Please provide the main POCs email address: ',
         name: 'email',
-    },
-  ])
-
-generateMarkdown();
+    }
+  ]);
+};
+  
