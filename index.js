@@ -2,6 +2,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
+
 function getInfo(){
 inquirer
   .prompt([
@@ -68,5 +70,18 @@ inquirer
         name: 'email',
     }
   ]);
+
+
 };
+
+const init = () => {
+    getInfo()
+      .then((data) => fs.writeFileSync('${data.title}.md', generateMarkdown(data))
+      .then(() => console.log('Successfully wrote to README'))
+      .catch((err) => console.error(err)))
+};
+
+init();
+  
+  
   
