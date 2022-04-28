@@ -69,9 +69,9 @@ inquirer
     }
   ])
   .then((data) => {
-    fs.writeFileSync('${data.title}.md', generateMarkdown(data))
-    .then(() => console.log('Successfully wrote to README'))
-    .catch((err) => console.error(err))
+    fs.writeFileSync(`${data.title}.md`, generateMarkdown(data))
+    // .then(() => console.log('Successfully wrote to README'))
+    // .catch((err) => console.error(err))
    });
 
 // const init = () => {
