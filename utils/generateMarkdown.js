@@ -93,26 +93,26 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  ##Table of Contents
+  ## Table of Contents
 
-  ##Installation
+  ## Installation
   ${data.installation}
 
-  ##Usage
+  ## Usage
   ${data.usage}
 
-  ##Visuals
+  ## Visuals
   ![This is a screenshot/demo of the project.](Insert Picture Link Info Here)
 
-  ##Tests
+  ## Tests
 
   ${data.tests}
 
-  ##Contributors
+  ## Contributors
 
   ${data.contributors}
 
-  ##Contact
+  ## Contact
 
   If you have any questions about this project please contact: ${data.contact}
 
