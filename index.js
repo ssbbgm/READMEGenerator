@@ -49,7 +49,7 @@ inquirer
     {
         type: 'input',
         message: 'Who contributed to this project?',
-        name: 'projectContributors',
+        name: 'contributors',
     },
     {
         type: 'input',

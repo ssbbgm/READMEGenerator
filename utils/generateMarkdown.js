@@ -27,7 +27,24 @@ function generateMarkdown(data) {
   ##Usage
   ${data.usage}
 
-  
+  ##Visuals
+  ![This is a screenshot/demo of the project.](Insert Picture Link Info Here)
+
+  ##License
+  ${data.license}
+
+  ##Tests
+
+  ${data.tests}
+
+  ##Contributors
+
+  ${data.contributors}
+
+  ##Contact
+
+  If you have any questions about this project please contact: 
+
 
 `;
 }
