@@ -88,6 +88,8 @@ function renderLicenseSection(data) {
   let licenseLink = renderLicenseLink(data);
   let licenseRender = `## License
    ${licenseBadge}${licenseLink}
+
+   Please click on the badge to view license info.
    `
   return licenseRender;
 }
@@ -97,6 +99,8 @@ function generateMarkdown(data) {
 
   return `
   # ${data.title} 
+
+  ${renderLicenseSection (data.license)}
 
   ## Description
   ${data.description}
@@ -137,7 +141,6 @@ function generateMarkdown(data) {
 
   Email: ${data.email}
 
-  ${renderLicenseSection (data.license)}
 `
 }
 
