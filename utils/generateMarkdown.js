@@ -107,6 +107,7 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
+  - [License](#license)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -114,7 +115,6 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Contributors](#contributors)
   - [Contact](#contact)
-  - [License](#license)
 
   ## Installation
   ${data.installation}
