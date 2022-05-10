@@ -97,49 +97,49 @@ function renderLicenseSection(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  return `
-  # ${data.title} 
+return `
+# ${data.title} 
 
-  ${renderLicenseSection (data.license)}
+${renderLicenseSection (data.license)}
 
-  ## Description
-  ${data.description}
+## Description
+${data.description}
 
-  ## Table of Contents
+## Table of Contents
 
-  - [License](#license)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Visuals](#visuals)
-  - [Tests](#tests)
-  - [Contributors](#contributors)
-  - [Contact](#contact)
+- [License](#license)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Visuals](#visuals)
+- [Tests](#tests)
+- [Contributors](#contributors)
+- [Contact](#contact)
 
-  ## Installation
-  ${data.installation}
+## Installation
+${data.installation}
 
-  ## Usage
-  ${data.usage}
+## Usage
+${data.usage}
 
-  ## Visuals
-  ![This is a screenshot/demo of the project.](Insert Picture or Link Info Here)
+## Visuals
+![This is a screenshot/demo of the project.](Insert Picture or Link Info Here)
 
-  ## Tests
+## Tests
 
-  ${data.tests}
+${data.tests}
 
-  ## Contributors
+## Contributors
 
-  ${data.contributors}
+${data.contributors}
 
-  ## Contact
+## Contact
 
-  If you have any questions about this project please contact: ${data.contact}
+If you have any questions about this project please contact: ${data.contact}
 
-  Github: [${data.github}](http://github.com/${data.github})
+Github: [${data.github}](http://github.com/${data.github})
 
-  Email: ${data.email}
+Email: ${data.email}
 
 `
 }
